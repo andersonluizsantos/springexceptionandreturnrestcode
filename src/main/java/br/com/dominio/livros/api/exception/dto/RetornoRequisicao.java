@@ -14,12 +14,17 @@ import lombok.Data;
 @Builder(toBuilder = true)
 public class RetornoRequisicao {
 	@JsonInclude(JsonInclude.Include.NON_NULL)
-	@JsonProperty(value="nome_aplicao_exception")
+	@JsonProperty(value = "nome_aplicao_exception")
 	private String nomeAplicacao;
-	@JsonProperty(value="texto_mensagem_retorno")
-	private String textoMensagemRetorno;	
+	
+	@JsonProperty(value = "texto_mensagem_dev")
+	private String textoMensagemDev;
+	
+	@JsonProperty(value = "texto_mensagem_user")
+	private String textoMensagemUser;
+	
 	@JsonInclude(JsonInclude.Include.NON_NULL)
-	@JsonProperty(value="lista_campos_invalidos")
-	//private List<ErrorObjects> listaCamposInvalidos;
+	@JsonProperty(value = "lista_campos_invalidos")
+	// private List<ErrorObjects> listaCamposInvalidos;
 	private List<String> listaCamposInvalidos;
 }
